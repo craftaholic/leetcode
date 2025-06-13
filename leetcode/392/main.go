@@ -24,7 +24,7 @@ func main() {
 }
 
 func isSubsequence(s string, t string) bool {
-    i := 0
+	i := 0
 	for cur := 0; cur < len(t); cur++ {
 		// Condition to return true when s is iterated
 		if i < len(s) {
