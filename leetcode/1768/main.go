@@ -30,7 +30,7 @@ func mergeAlternately(word1 string, word2 string) string {
 	w1i := 0
 	w2i := 0
 
-	for _ = range len(word1) + len(word2) {
+	for range len(word1) + len(word2) {
 		if w1i >= len(word1) {
 			sum += string(word2[w2i])
 			w2i++
