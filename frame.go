@@ -5,25 +5,23 @@ import (
 )
 
 type Test struct {
-	word1 string
-	word2 string
-	want  string
+	input1 []int
+	input2 []int
+	want   int
 }
 
 func main() {
 	tests := []Test{}
-	tests = append(tests, Test{"abc", "pqr", "apbqcr"})
-	tests = append(tests, Test{"ab", "pqrs", "apbqrs"})
-	tests = append(tests, Test{"abcd", "pq", "apbqcd"})
 
-	for _, tc := range tests {
-		got := mergeAlternately(tc.word1, tc.word2)
+	for i, tc := range tests {
+		got := findDifference(tc.input1, tc.input2)
 		if got != tc.want {
-			fmt.Printf("Input: %s, %s => Output: %s, Expected: %s\n", tc.word1, tc.word2, got, tc.want)
+			fmt.Print("tc ", i)
+			fmt.Printf("Input: %s, %s => Output: %s, Expected: %s\n", tc.input1, tc.input2, got, tc.want)
 		}
 	}
 }
 
-func mergeAlternately(word1 string, word2 string) string {
-	return "abc"
+func findDifference(nums1 []int, nums2 []int) int {
+	return 0
 }
