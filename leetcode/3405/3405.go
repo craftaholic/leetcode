@@ -43,6 +43,10 @@ func main() {
 }
 
 func countGoodArrays(n int, m int, k int) int {
+	// To solve this, we can imagine arr[i-1], and arr[i] is 1 number j
+	// Then the combination is all distributions of the array where 
+	// j belongs [1, m]
+	// total number in the imagine array is n - k elements
+
 	return 0
 }
-
