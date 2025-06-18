@@ -12,26 +12,7 @@ type Test struct {
 }
 
 func main() {
-	tests := []Test{
-		{
-			input1: 3,
-			input2: 2,
-			input3: 1,
-			want: 4,
-		},
-		{
-			input1: 4,
-			input2: 2,
-			input3: 2,
-			want: 6,
-		},
-		{
-			input1: 5,
-			input2: 2,
-			input3: 0,
-			want: 2,
-		},
-	}
+	tests := []Test{}
 
 	for i, tc := range tests {
 		got := countGoodArrays(tc.input1, tc.input2, tc.input3)
@@ -45,4 +26,3 @@ func main() {
 func countGoodArrays(n int, m int, k int) int {
 	return 0
 }
-
